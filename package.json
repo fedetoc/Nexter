@@ -1,0 +1,32 @@
+{
+  "name": "nexter",
+  "version": "1.0.0",
+  "description": "proyecto Nexter",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "node-sass ./src/sass/main.scss ./src/style.css -w",
+    "watch-css": "live-server --browser=chrome",
+    "start": "concurrently \"npm:watch-*\"",
+    "build": "webpack",
+    "compile:sass": "node-sass main.scss prueba.comp.css",
+    "compress:css": "node-sass prueba.comp.css style.mean.css --output-style compressed"
+  },
+  "author": "federico",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "concurrently": "^7.0.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^4.14.1",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "autoprefixer.options": {
+    "browsers": [
+      "last 10 versions",
+      "ie >= 9",
+      "> 5%"
+    ]
+  }
+}

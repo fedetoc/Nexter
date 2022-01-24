@@ -1,0 +1,46 @@
+%heading{
+    font-family: $font-titles;
+    font-weight: 300;
+}
+
+.heading-1{
+    font-family: $font-title-h1;
+    font-weight: 500;
+    color: white;
+    font-style: italic;
+}
+
+.heading-2{
+    @extend %heading;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.heading-3{
+    @extend %heading;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: $color-primary;    
+}
+
+.heading-fourth{
+    @extend %heading;
+    &--dark{color: $color-title; font-size: 2.2rem;};
+    &--light{color: white; font-size: 2.2rem;};
+    &--reduced {color: white; font-size: 1.6rem;}
+}
+
+
+
+
+
+.mb-sm{
+    margin-bottom: 1.7rem;
+}
+
+.mb-mm{
+    margin-bottom: 1.8rem;
+}
+
+.center{text-align: center;}

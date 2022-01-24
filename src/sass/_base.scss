@@ -1,0 +1,52 @@
+//COLOR VARIABLES
+$color-primary: #bd9354;
+$color-secondary: #e3d18a;
+$brown-dark: #433520;
+$dark-blue: #1e212d;
+$darker-blue: #1e2330;
+$darker-brown: #4a3933;
+$lighter-blue: #0d335d;
+$grey-white: #f6f6f6;
+$brown-light: #d8c292;
+$orange-pink: #ff7b54;
+$orange-darker: #a75136;
+$color-title: #532e1c;
+
+//FONT VARIABLES
+$font-primary: "Ubuntu", sans-serif;
+$font-titles: "Comfortaa", cursive;
+$font-title-h1: "Shippori Mincho", serif;
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  color: $brown-dark;
+  font-weight: 300;
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: 88vh min-content 45vw repeat(3, min-content);
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(
+      min-content,
+      5rem
+    ) [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(min-content, 5rem) [full-end];
+
+  & > * {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+}
