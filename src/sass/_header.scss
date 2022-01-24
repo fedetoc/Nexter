@@ -1,78 +1,72 @@
-.header{
-    background-color: $lighter-blue;
-    padding: 4rem 0rem;
-    grid-column: full-start / 9;
-    grid-row: 1 / 2;
-    background-image: linear-gradient(rgba($darker-blue, .8), rgba($darker-blue, .8)), url(img/header-section-backimage.jpg);
-    background-size: cover;
-    background-position: center;
+.header {
+  background-color: $lighter-blue;
+  padding: 4rem 0rem;
+  grid-column: full-start / 9;
+  grid-row: 1 / 2;
+  background-image: linear-gradient(
+      rgba($darker-blue, 0.8),
+      rgba($darker-blue, 0.8)
+    ),
+    url(../res/header-section-backimage.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr repeat(3, min-content) 1fr;
+  grid-template-columns: 78%;
+  justify-content: center;
+  justify-items: start;
+
+  &-logo {
+    width: auto;
+    height: 3.5rem;
+    justify-self: center;
+  }
+
+  &-btn {
+    margin-top: 1.5rem;
+    filter: opacity(85%) brightness(90%);
+    transition: all 0.2s;
+
+    &:hover {
+      filter: opacity(100%) brightness(90%);
+    }
+  }
+
+  &-resenias-logo-cont {
+    margin-top: 0.7rem;
     display: grid;
-    grid-template-rows: 1fr repeat(3, min-content) 1fr;
-    grid-template-columns: 78%;
-    justify-content: center;
-    justify-items: start;
+    grid-template-columns: repeat(4, minmax(min-content, 1fr));
+    justify-items: center;
+    align-items: center;
+  }
 
+  &-resenias-logo {
+    max-width: 100%;
+    max-height: 2.5rem;
+    background-color: rgba($lighter-blue, 0.2);
+    //fill: $darker-blue;
+    filter: brightness(65%);
+  }
 
-    &-logo{
-        width: auto;
-        height: 3.5rem;
-        justify-self: center; 
+  &-separador {
+    align-self: end;
+    justify-self: stretch;
+    color: rgba(white, 0.6);
+    font-family: $font-titles;
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    &::after,
+    &::before {
+      content: "";
+      height: 2px;
+      width: 100%;
+      display: block;
+      background-color: rgba(white, 0.6);
     }
-
-    &-btn{
-        margin-top: 1.5rem;
-        filter: opacity(85%) brightness(90%);
-        transition: all .2s;
-
-        &:hover{
-            filter: opacity(100%) brightness(90%);
-        }
-    }
-
-    &-resenias-logo-cont{
-        margin-top: .7rem;
-        display: grid;
-        grid-template-columns: repeat(4, minmax(min-content, 1fr));
-        justify-items: center;
-        align-items: center;
-    }
-
-
-    &-resenias-logo{
-        max-width: 100%;
-        max-height: 2.5rem;
-        background-color: rgba($lighter-blue, .2    );
-        //fill: $darker-blue;
-        filter: brightness(65%);
-
-    }
-
-
-
-    &-separador{
-        align-self: end;
-        justify-self: stretch;
-        color: rgba(white, .6);
-        font-family: $font-titles;
-        font-size: 1.4rem;
-        display: grid;
-        grid-template-columns: 1fr max-content 1fr;
-        align-items: center;
-        column-gap: 1.5rem;
-        margin-bottom: 1rem;
-
-        
-
-        &::after,
-        &::before{
-            content: "";
-            height: 2px;
-            width: 100%;
-            display: block;
-            background-color: rgba(white, .6);
-
-        }
-
-
-    }
+  }
 }
